@@ -15,7 +15,7 @@ body{background:var(--bg);color:var(--tx1);min-height:100vh;-webkit-font-smoothi
 .logo{font-family:'Space Mono',monospace;font-size:22px;font-weight:700;letter-spacing:-1px;color:#fff}
 .logo span{color:var(--blue)}
 .logo sub{font-size:11px;color:var(--tx3);font-weight:400;vertical-align:baseline;margin-left:2px}
-.tabs{display:flex;gap:4px;background:var(--s2);border-radius:10px;padding:3px}
+.tabs{display:flex;gap:4px;backgroundvar(--s2);border-radius:10px;padding:3px}
 .tab{padding:8px 16px;border:none;background:none;color:var(--tx3);cursor:pointer;border-radius:8px;font-size:13px;font-weight:600;transition:all .2s}
 .tab.active{background:var(--blue);color:#fff}
 .tab:hover:not(.active){color:var(--tx1);background:var(--s3)}
@@ -52,7 +52,7 @@ body{background:var(--bg);color:var(--tx1);min-height:100vh;-webkit-font-smoothi
 .pb.minimo .val{color:var(--red)}
 .pb.toma .val{color:var(--amber)}
 .pb.rapido .val{color:var(--cyan)}
-.pb.real .val{color:var(--green)}
+.pb.real .val{color:var(--green);font-size:26px;font-weight:800;letter-spacing:-.5px}.pb.real{border:2px solid rgba(16,185,129,.5);background:rgba(16,185,129,.06);grid-column:1/-1}.pb.real .lbl{color:rgba(16,185,129,.8);font-weight:700;font-size:11px}.pb.real .sub{color:rgba(16,185,129,.6)}
 .pb.publicado .val{color:var(--blue)}
 .pb.maximo .val{color:var(--purple)}
 @media(max-width:400px){.pb .val{font-size:14px}.pb .sub{font-size:9px}}
@@ -114,15 +114,15 @@ select option{background:var(--s2);color:var(--tx1)}
   <div class="res" id="resCot">
     <div class="res-hdr">Rangos de precio estimados <span class="source-tag">CCA + ACARA</span></div>
     <div class="price-grid">
-      <div class="pb minimo"><div class="lbl">Precio Mín. Venta</div><div class="val" id="pMinimo">-</div><div class="sub" id="pMinimoArs"></div></div>
+              <div class="pb real"><div class="lbl">Valor Real</div><div class="val" id="pReal">-</div><div class="sub" id="pRealArs"></div></div>
+              <div class="pb minimo"><div class="lbl">Precio Mín. Venta</div><div class="val" id="pMinimo">-</div><div class="sub" id="pMinimoArs"></div></div>
       <div class="pb toma"><div class="lbl">Toma Concesionario</div><div class="val" id="pToma">-</div><div class="sub" id="pTomaArs"></div></div>
       <div class="pb rapido"><div class="lbl">Venta Rápida</div><div class="val" id="pRapido">-</div><div class="sub" id="pRapidoArs"></div></div>
-      <div class="pb real"><div class="lbl">Valor Real</div><div class="val" id="pReal">-</div><div class="sub" id="pRealArs"></div></div>
       <div class="pb publicado"><div class="lbl">Promedio Publicado</div><div class="val" id="pPublicado">-</div><div class="sub" id="pPublicadoArs"></div></div>
       <div class="pb maximo"><div class="lbl">Precio Máximo</div><div class="val" id="pMaximo">-</div><div class="sub" id="pMaximoArs"></div></div>
     </div>
     <div class="meta"><span id="resMeta"></span><span id="resMoneda"></span></div>
-    <div class="note"><b>Precio Mín. Venta:</b> lo mínimo aceptable si necesitás vender urgente. <b>Toma Concesionario:</b> lo que te ofrece una agencia. <b>Venta Rápida:</b> si vendés rápido entre particulares. <b>Valor Real:</b> precio justo de mercado. <b>Promedio Publicado:</b> lo que piden en las publicaciones. <b>Precio Máximo:</b> el techo del mercado.</div>
+              <div class="note"><b>Valor Real:</b> precio justo de mercado entre particulares. <b>Precio Mín. Venta:</b> lo mínimo si necesitás vender urgente. <b>Toma Concesionario:</b> lo que te ofrece una agencia. <b>Venta Rápida:</b> si vendés rápido. <b>Promedio Publicado:</b> lo que piden en las publicaciones. <b>Precio Máximo:</b> el techo del mercado.</div>
     <button class="btn-share" onclick="compartirCotizacion()">📤 Compartir cotización</button>
   </div>
 </div>
